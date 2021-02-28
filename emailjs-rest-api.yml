@@ -1,0 +1,56 @@
+swagger: "2.0"
+info:
+  description: "Non-official EmailJS OAS that defines EMailJS.com REST API"
+  version: "1.0"
+  title: "EMailJS REST API"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "rsaestrela@gmail.com"
+  license:
+    name: "MIT"
+    url: "https://github.com/rsaestrela/emailjs-java-sdk/blob/main/LICENSE"
+host: "api.emailjs.com"
+basePath: "/api/v1.0/email"
+schemes:
+  - "https"
+paths:
+  /send:
+    post:
+      summary: "Send email"
+      description: "Sends an email based on the specified email template and the passed dynamic parameters. The email is sent via the specified email service or via the default service if default_service keyword is passed."
+      operationId: "send"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Send e-mail definition"
+          required: true
+          schema:
+            $ref: "#/definitions/SendRequest"
+      responses:
+        '200':
+          description: "OK"
+        '400':
+          description: "Invalid request"
+        '5XX':
+          description: "Internal error"
+definitions:
+  SendRequest:
+    type: "object"
+    properties:
+      service_id:
+        type: "string"
+      template_id:
+        type: "string"
+      user_id:
+        type: "string"
+      template_params:
+        type: "object"
+      accessToken:
+        type: "string"
+    xml:
+      name: "SendRequest"
+externalDocs:
+  description: "Find out more about EMailJS"
+  url: "https://www.emailjs.com/docs/"
