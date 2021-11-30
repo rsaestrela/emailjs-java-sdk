@@ -27,6 +27,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <openapi-generator-maven-plugin.version>5.0.1</openapi-generator-maven-plugin.version>
+        <sonar.organization>noideawhatimdoing</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
     <distributionManagement>
         <repository>

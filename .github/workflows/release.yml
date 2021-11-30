@@ -1,8 +1,11 @@
 name: release
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 jobs:
   job-container:
+    if: github.ref == 'refs/heads/disabled'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

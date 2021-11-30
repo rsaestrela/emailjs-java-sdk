@@ -1,4 +1,5 @@
 ![build-status](https://github.com/rsaestrela/emailjs-java-sdk/workflows/build/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=emailjs-java-sdk&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=emailjs-java-sdk)
 
 # EmailJS Java SDK
 
